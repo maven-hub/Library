@@ -69,10 +69,10 @@ class LibraryTest {
     void shouldThrowExceptionIfUserDoesNotExistInTheLibrary() throws BookAlreadyBorrowedException {
         // given
         Library library = new Library(new Address("TestStreet", 10), new ArrayList<>(), new ArrayList<>());
-        User user = User.create("Marius", "marius43", "MyPassword1", "mymail1@email.pl");
+        User user = User.create("Marius", "marius35", "MyPassword", "mymail@email.pl");
         Book book = new Book("Sapiens", "Yuval");
         // when
-        library.borrowBook(user, book);
+
         // then
         assertThrows(IllegalArgumentException.class, () -> library.borrowBook(user, book));
     }

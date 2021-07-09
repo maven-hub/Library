@@ -52,7 +52,7 @@ public class Library {
                 .noneMatch(u -> u.equals(user.getEmail()))) {
             throw new IllegalArgumentException("User doesn't exist.");
         }
-        user.borrowBook(book);
+        user.addBook(book);
         System.out.println("User " + user.getName() + " has borrowed the book " + book.getTitle());
         System.out.println("Book has been borrowed on the date of: " + LocalDate.now());
     }

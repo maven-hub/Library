@@ -33,7 +33,7 @@ public class User {
         return new User(name, login, password, email);
     }
 
-    public void borrowBook(Book book) throws BookAlreadyBorrowedException {
+    public void addBook(Book book) throws BookAlreadyBorrowedException {
         if (borrowedBooks.stream()
                 .map(Book::getTitle)
                 .anyMatch(b -> b.equals(book.getTitle()))) {
