@@ -66,7 +66,7 @@ class LibraryTest {
     }
 
     @Test
-    void shouldThrowExceptionIfUserDoesNotExistInTheLibrary() throws BookAlreadyBorrowedException {
+    void shouldThrowExceptionIfUserDoesNotExistInTheLibrary() {
         // given
         Library library = new Library(new Address("TestStreet", 10), new ArrayList<>(), new ArrayList<>());
         User user = User.create("Marius", "marius35", "MyPassword", "mymail@email.pl");
